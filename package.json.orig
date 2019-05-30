@@ -3,10 +3,10 @@
   "author": "Tomas Bjerre",
   "description": "Uses output of pom-dependency-analyzer to implement a REST API.",
   "keywords": [
-    'pom',
-    'maven',
-    'dependency',
-    'API'
+    "pom",
+    "maven",
+    "dependency",
+    "API"
   ],
   "homepage": "https://github.com/tomasbjerre/pom-dependency-analyzer-web-api",
   "repository": "git@github.com:tomasbjerre/pom-dependency-analyzer-web-api.git",

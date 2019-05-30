@@ -12,10 +12,10 @@ Example:
 npx pom-dependency-analyzer-web-api -af gh-pages/api
 ```
 
-Or from the repo:
+Or with java:
 
 ```shell
-./gradlew run --args="-af gh-pages/api"
+java -jar pom-dependency-analyzer-web-api-*.jar -af gh-pages/api
 ```
 
 # Usage

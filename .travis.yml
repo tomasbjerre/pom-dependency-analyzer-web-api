@@ -7,8 +7,3 @@ matrix:
      jdk: oraclejdk8
      script:
        - ./gradlew build -i
-
-   - language: node_js
-     node_js: 10
-     script:
-       - cd web && npm run build

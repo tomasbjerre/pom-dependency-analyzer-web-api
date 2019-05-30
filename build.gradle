@@ -1,11 +1,16 @@
 apply plugin: 'java'
 
-project.ext.tags = ['pom', 'maven', 'dependency', 'web', 'graph']
+project.ext.tags = ['pom', 'maven', 'dependency', 'API']
 group = 'se.bjurr.pomanalyzerweb'
-description = 'Uses output of pom-dependency-analyzer to create a webpage with graphs.'
+description = 'Uses output of pom-dependency-analyzer to implement a REST API.'
+project.ext.useShadowJar = true
+project.ext.syncCentral = false
 
-apply plugin: 'application'
-mainClassName = 'se.bjurr.pomdependencyanalyzerweb.main.Main'
+jar {
+ manifest {
+  attributes 'Main-Class': 'se.bjurr.pomdependencyanalyzerweb.main.Main'
+ }
+}
 
 buildscript {
  repositories {
@@ -14,12 +19,13 @@ buildscript {
   maven { url "https://jitpack.io" }
  }
  dependencies {
-  classpath 'com.github.tomasbjerre:gradle-scripts:master-SNAPSHOT'
+  classpath 'com.github.tomasbjerre:gradle-scripts:gradle5-SNAPSHOT'
   classpath 'org.openapitools:openapi-generator-gradle-plugin:3.3.4'
  }
 }
 apply from: project.buildscript.classLoader.getResource('java.gradle').toURI()
 apply from: project.buildscript.classLoader.getResource('changelog.gradle').toURI()
+apply from: project.buildscript.classLoader.getResource('release.gradle').toURI()
 apply plugin: 'org.openapi.generator'
 
 ext {

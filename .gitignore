@@ -1,9 +1,5 @@
-web/src/services/pdaw
-tmp
-**/generated/**
+generated-java/
 src/main/java/se/bjurr/pomdependencyanalyzerweb/gen/
-generated-java
-node_modules
 .classpath
 .project
 .settings
@@ -16,5 +12,8 @@ temp
 .couscous
 couscous.phar
 .okhttpcache
-.openapi-*
-gh-pages
+jdeploy-bundle
+package.json
+node_modules
+package-lock.json
+

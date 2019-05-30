@@ -1,11 +1,18 @@
-# Pom Dependency Analyzer Web
-[![Build Status](https://travis-ci.org/tomasbjerre/pom-dependency-analyzer-web.svg?branch=master)](https://travis-ci.org/tomasbjerre/pom-dependency-analyzer-web)
+# Pom Dependency Analyzer Web API
+[![Build Status](https://travis-ci.org/tomasbjerre/pom-dependency-analyzer-web-api.svg?branch=master)](https://travis-ci.org/tomasbjerre/pom-dependency-analyzer-web-api)
+[![NPM](https://img.shields.io/npm/v/pom-dependency-analyzer-web-api.svg?style=flat-square) ](https://www.npmjs.com/package/pom-dependency-analyzer-web-api)
 
-Uses output of [Pom Dependency Analyzer](https://github.com/tomasbjerre/pom-dependency-analyzer) to create a browsable webpage with graphs. The webpage is completely static and can be served from [Github pages](https://pages.github.com/), [Gitlab pages](https://docs.gitlab.com/ce/user/project/pages/) or by cloning the repo and running on `localhost`.
+Uses output of [Pom Dependency Analyzer](https://github.com/tomasbjerre/pom-dependency-analyzer) to create an API implementation. The implementation is completely static and can be served from [Github pages](https://pages.github.com/), [Gitlab pages](https://docs.gitlab.com/ce/user/project/pages/) or by cloning the repo and running on `localhost`.
 
-API documented in [swagger.yml](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/tomasbjerre/pom-dependency-analyzer-web/master/swagger.yml).
+API documented in [swagger.yml](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/tomasbjerre/pom-dependency-analyzer-web-api/master/swagger.yml).
 
 Example:
+
+```shell
+npx -af gh-pages/api
+```
+
+Or from the repo:
 
 ```shell
 ./gradlew run --args="-af gh-pages/api"
@@ -34,40 +41,3 @@ Example:
                                            <string>: any string
                                            Default: <user home>/.m2/repository
 ```
-
-# Backend
-
-Developed with Gradle.
-
-Commands:
-
- * `./gradlew build` - Build backend
-
-# Frontend
-
-You can change where the API is located by creating a file called `pdaw-config.json`. Place it where you deployed the frontend, same level as the `index.html`. It should contain::
-```json
-{
- "apiBasePath": "http://whereveryour/api/is/located"
-}
-```
-
-Developed with Vue.
-
-Commands:
-
- * `sudo npm install -g @vue/cli` - Install Vue CLI globally
- * `npm install` - Install dependencies
- * `npm run build` - Build
- * `npm run serve` - Serve
-
-GUI based on: https://github.com/vuetifyjs/vuetify
-
-Recommended setup:
-
- * Visual Studio Code
-   * Extensions
-     * `ext install esbenp.prettier-vscode`
-     * `ext install octref.vetur`
-   * Settings
-     * Text editor / Formatting / Format on Save

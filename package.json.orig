@@ -1,0 +1,22 @@
+{
+  "bin": {"pom-dependency-analyzer-web-api": "jdeploy-bundle/jdeploy.js"},
+  "author": "Tomas Bjerre",
+  "description": "Uses output of pom-dependency-analyzer to implement a REST API.",
+  "keywords": [
+    'pom',
+    'maven',
+    'dependency',
+    'API'
+  ],
+  "homepage": "https://github.com/tomasbjerre/pom-dependency-analyzer-web-api",
+  "repository": "git@github.com:tomasbjerre/pom-dependency-analyzer-web-api.git",
+  "main": "index.js",
+  "preferGlobal": true,
+  "version": "VERSION.0",
+  "jdeploy": {"jar": "build/libs/pom-dependency-analyzer-web-api-VERSION.jar"},
+  "dependencies": {"shelljs": "^0.7.5"},
+  "license": "Apache 2",
+  "name": "pom-dependency-analyzer-web-api",
+  "files": ["jdeploy-bundle"],
+  "scripts": {"test": "echo \"Error: no test specified\" && exit 1"}
+}

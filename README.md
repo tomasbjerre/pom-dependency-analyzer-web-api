@@ -9,7 +9,7 @@ API documented in [swagger.yml](https://petstore.swagger.io/?url=https://raw.git
 Example:
 
 ```shell
-npx -af gh-pages/api
+npx pom-dependency-analyzer-web-api -af gh-pages/api
 ```
 
 Or from the repo:

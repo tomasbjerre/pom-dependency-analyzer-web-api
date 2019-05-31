@@ -71,7 +71,10 @@ public class PdawData {
     if (!metadataPerGroupArtifactIdAndVersion.containsKey(key)) {
       new ArrayList<>();
     }
-    return new ArrayList<Metadata>(metadataPerGroupArtifactIdAndVersion.get(key));
+    if (metadataPerGroupArtifactIdAndVersion.containsKey(key)) {
+      return new ArrayList<Metadata>(metadataPerGroupArtifactIdAndVersion.get(key));
+    }
+    return new ArrayList<>();
   }
 
   private String key(final String groupId, final String artifactId, final String version) {

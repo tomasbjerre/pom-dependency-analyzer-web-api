@@ -2,6 +2,7 @@ package se.bjurr.pomdependencyanalyzer.work;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Comparator;
@@ -34,11 +35,16 @@ public class MainTest {
     Main.main(args);
   }
 
-  // @Test
+  @Test
   public void testStoreApi() throws Exception {
+    final String storageFolder = testResources() + "/storage-folder-1-comments-lib";
     final String[] args = {
-      "-af", tempDirWithPrefix.toFile().getAbsolutePath() //
+      "-sf", storageFolder, "-af", tempDirWithPrefix.toFile().getAbsolutePath() //
     };
     Main.main(args);
+  }
+
+  private String testResources() throws URISyntaxException {
+    return new File(MainTest.class.getResource("/.gitkeep").toURI()).getParent();
   }
 }

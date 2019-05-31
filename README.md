@@ -9,13 +9,13 @@ API documented in [swagger.yml](https://petstore.swagger.io/?url=https://raw.git
 Example:
 
 ```shell
-npx pom-dependency-analyzer-web-api -af gh-pages/api
+npx pom-dependency-analyzer-web-api -sf metadata/folder -af gh-pages/api
 ```
 
 Or with java:
 
 ```shell
-java -jar pom-dependency-analyzer-web-api-*.jar -af gh-pages/api
+java -jar pom-dependency-analyzer-web-api-*.jar -sf metadata/folder -af gh-pages/api
 ```
 
 # Usage
